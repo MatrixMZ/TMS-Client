@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-4">
+        <app-profile-card></app-profile-card>
+    </div>
+    <div class="col-8">
+        <mat-tab-group dynamicHeight>
+            <mat-tab label="Overview">
+              <app-dashboard-overview></app-dashboard-overview>
+            </mat-tab>
+            <mat-tab label="Inventory">
+                <app-dashboard-inventory></app-dashboard-inventory>
+            </mat-tab>
+            <mat-tab label="Services">
+                <app-dashboard-services></app-dashboard-services>
+            </mat-tab>
+            <mat-tab label="Contractors">
+                <app-dashboard-contractors></app-dashboard-contractors>
+            </mat-tab>
+          </mat-tab-group>
+    </div>
+</div>

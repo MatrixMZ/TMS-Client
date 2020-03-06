@@ -1,0 +1,74 @@
+<mat-drawer-container autosize>
+    <mat-drawer class="sidenav" mode="side" opened (mouseenter)="show()" (mouseleave)="hide()">
+      <mat-nav-list>
+        <div>
+            <div class="spacer"></div>
+          <mat-list-item class="logo" routerLink="/admin/employee" [ngClass]="expanded ? 'expanded' : '' ">
+            <img matListIcon src="../../../../assets/img/icon.png" alt="" *ngIf="!expanded">
+            <a matLine *ngIf="expanded"><img matLine src="assets/img/logo_nieb_ale_tlo.svg"></a>
+          </mat-list-item>
+  
+          <div class="spacer"></div>
+  
+          <mat-list-item routerLink="/admin/employer-list">
+            <mat-icon matListIcon>supervisor_account</mat-icon>
+            <a matLine *ngIf="expanded">Pracodawcy</a>
+          </mat-list-item>
+  
+          <mat-list-item routerLink="/admin/labour-contracts">
+            <mat-icon matListIcon>file_copy</mat-icon>
+            <a matLine *ngIf="expanded">Umowy</a>
+          </mat-list-item>
+  
+          <mat-list-item routerLink="/admin/job-offers">
+            <mat-icon matListIcon>local_offer</mat-icon>
+            <a matLine *ngIf="expanded">Oferty Pracy</a>
+          </mat-list-item>
+  
+          <div class="spacer"></div>
+  
+          <mat-list-item routerLink="/admin/employee">
+            <mat-icon matListIcon>people</mat-icon>
+            <a matLine *ngIf="expanded">Pracownicy</a>
+          </mat-list-item>
+  
+          <mat-list-item routerLink="/admin/work-contracts">
+            <mat-icon matListIcon>work</mat-icon>
+            <a matLine *ngIf="expanded">Zlecenia</a>
+          </mat-list-item>
+  
+          <mat-list-item routerLink="/admin/worksheets">
+            <mat-icon matListIcon>list_alt</mat-icon>
+            <a matLine *ngIf="expanded">Karty pracy</a>
+          </mat-list-item>
+  
+          <div class="spacer"></div>
+  
+          <mat-list-item routerLink="/admin/dictionaries">
+            <mat-icon matListIcon>library_books</mat-icon>
+            <a matLine *ngIf="expanded">Słowniki</a>
+          </mat-list-item>
+  
+          <mat-list-item routerLink="/admin/users">
+            <mat-icon matListIcon>person_pin</mat-icon>
+            <a matLine *ngIf="expanded">Użytkownicy</a>
+          </mat-list-item>
+  
+          <mat-list-item routerLink="/admin/system-parameters">
+            <mat-icon matListIcon>settings_input_component</mat-icon>
+            <a matLine *ngIf="expanded">Parametry</a>
+          </mat-list-item>
+  
+          <mat-list-item routerLink="/admin/auth-parameters">
+            <mat-icon matListIcon>fingerprint</mat-icon>
+            <a matLine *ngIf="expanded">Parametry autoryzacji</a>
+          </mat-list-item>
+  
+        </div>
+      </mat-nav-list>
+    </mat-drawer>
+    <div class="sidenav-content">
+        <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-container>
+  
